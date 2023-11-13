@@ -38,14 +38,14 @@ public class Patient {
     @Column(name = "id_patient")
     private Integer id;
 
-    @Column(name = "firstName")
-    private String firstName;
+    @Column(name = "prenom")
+    private String prenom;
 
-    @Column(name = "lastName")
-    private String lastName;
+    @Column(name = "nom")
+    private String nom;
 
-    @Column(name = "birthDate")
-    private Date birthDate;
+    @Column(name = "dateDeNaissance")
+    private Date dateDeNaissance;
 
     @Column(name = "email")
     private String email;
