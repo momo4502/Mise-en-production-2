@@ -65,9 +65,9 @@ public class PatientService {
     public Patient update(Long id, Patient patient) {
         return patientRepository.findById(id)
                 .map(p -> {
-                    p.setFirstName(patient.getFirstName());
-                    p.setLastName(patient.getLastName());
-                    p.setBirthDate(patient.getBirthDate());
+                    p.setPrenom(patient.getPrenom());
+                    p.setNom(patient.getNom());
+                    p.setDateDeNaissance(patient.getDateDeNaissance());
                     p.setEmail(patient.getEmail());
                     p.setEmail(patient.getEmail());
                     p.setAdresse(patient.getAdresse());
