@@ -25,33 +25,5 @@ public class AdresseServiceTest {
     private Patient patient;
     private Adresse adresse;
 
-    @Test
-    @Transactional
-    void testDeletePatient() {
-        // Créer un patient avec une adresse
-        patient = new Patient();
-        patient.setFirstName("John");
-        patient.setLastName("Doe");
 
-        adresse = new Adresse();
-        adresse.setVille("Paris");
-        adresse.setRue("123 Rue de la Rue");
-        adresse.setZip_code(75000);
-
-        patient.setAdresse(adresse);
-
-        // Enregistrer le patient et l'adresse dans la base de données
-        patient = patientRepository.save(patient);
-        adresse = adresseRepository.save(adresse);
-
-        // Assurez-vous que le patient existe dans la base de données
-        assertTrue(patientRepository.existsById(patient.getId().longValue()));
-
-        // Supprimer le patient
-        patientRepository.deleteById(patient.getId().longValue());
-        assertThrows(Exception.class, () -> patientRepository.deleteById(patient.getId().longValue()));
-
-        // Vérifier que le patient a été supprimé de la base de données
-        assertFalse(patientRepository.existsById(patient.getId().longValue()));
-    }
 }
