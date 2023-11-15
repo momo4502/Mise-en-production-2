@@ -2,6 +2,7 @@
 
 Ce projet vise à créer une application de réservation dans un centre de vaccination Covid. L'application offre un accès public permettant la recherche des centres par ville et l'inscription à un centre. Elle offre également un accès administrateur permettant la gestion complète des centres, des administrateurs, des médecins, et des réservations.
 
+Lien vers le front-end: https://github.com/BillLeuna/centre-de-vaccination-front.git
 
 ## Enrôlement dans le Projet
 
