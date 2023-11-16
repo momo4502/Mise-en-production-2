@@ -1,31 +1,41 @@
 pipeline {
     agent any
-  environment {
-    MAVEN_ARGS=" -e clean install"
-    registry = ""
-    dockerContainerName = 'bookapi'
-    dockerImageName = 'bookapi-api'
-  }
-  stages {
-    stage('Build') {
-       steps {
-   withMaven(maven: 'MAVEN_ENV') {
-            sh "mvn ${MAVEN_ARGS}"
-        }
-       }
+
+    environment {
+        MAVEN_ARGS="clean install"
+        registry = ""
+        dockerContainerName = 'bookapi'
+        dockerImageName = 'bookapi-api'
     }
 
- stage('clean container') {
-      steps {
-       sh 'docker ps -f name=${dockerContainerName} -q | xargs --no-run-if-empty docker container stop'
-       sh 'docker container ls -a -fname=${dockerContainerName} -q | xargs -r docker container rm'
-       sh 'docker images -q --filter=reference=${dockerImageName} | xargs --no-run-if-empty docker rmi -f'
-      }
+    stages {
+        stage('Build') {
+            steps {
+                script {
+                    // Utilisation de 'bat' pour exécuter des commandes spécifiques à Windows
+                    bat "mvn ${MAVEN_ARGS}"
+                }
+            }
+        }
+
+        stage('clean container') {
+            steps {
+                script {
+                    // Utilisation de 'bat' pour exécuter des commandes spécifiques à Windows
+                    bat 'docker ps -f name=${dockerContainerName} -q | ForEach-Object { docker container stop $_ }'
+                    bat 'docker container ls -a -fname=${dockerContainerName} -q | ForEach-Object { docker container rm $_ }'
+                    bat 'docker images -q --filter=reference=${dockerImageName} | ForEach-Object { docker rmi -f $_ }'
+                }
+            }
+        }
+
+        stage('docker-compose start') {
+            steps {
+                script {
+                    // Utilisation de 'bat' pour exécuter des commandes spécifiques à Windows
+                    bat 'docker-compose up -d'
+                }
+            }
+        }
     }
-  stage('docker-compose start') {
-      steps {
-       sh 'docker compose up -d'
-      }
-    }
-  }
 }
