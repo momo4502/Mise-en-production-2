@@ -8,7 +8,7 @@ pipeline {
     }
 
     stages {
-        stage('Build') {
+        stage('Build project') {
             steps {
                 script {
                     // Utilisation de 'bat' pour exécuter des commandes spécifiques à Windows
@@ -40,7 +40,7 @@ pipeline {
             }
         }
 
-        stage('docker-compose start') {
+        stage('Start containers') {
             steps {
                 script {
                     // Utilisation de 'bat' pour exécuter des commandes spécifiques à Windows
