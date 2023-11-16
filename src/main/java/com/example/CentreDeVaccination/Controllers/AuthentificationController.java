@@ -3,6 +3,7 @@ package com.example.CentreDeVaccination.Controllers;
 import com.example.CentreDeVaccination.Exceptions.ObjectNotFoundException;
 import com.example.CentreDeVaccination.Models.Authentification;
 import com.example.CentreDeVaccination.Services.AuthentificationService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/authentifications")
 public class AuthentificationController {
 
+    @Autowired
     private AuthentificationService authentificationService;
 
     @GetMapping(path = "/get/{id}")

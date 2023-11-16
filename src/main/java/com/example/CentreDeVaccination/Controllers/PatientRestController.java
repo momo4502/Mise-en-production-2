@@ -3,6 +3,7 @@ package com.example.CentreDeVaccination.Controllers;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -17,6 +18,7 @@ import com.example.CentreDeVaccination.Services.PatientService;
 @CrossOrigin(origins = "http://localhost:4200")
 public class PatientRestController {
 
+    @Autowired
     private PatientService patientService;
 
     @GetMapping(path = "/get")

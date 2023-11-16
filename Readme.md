@@ -10,9 +10,9 @@ Lien vers le front-end : https://github.com/BillLeuna/centre-de-vaccination-fron
 Pour installer et exécuter le projet, vous devez disposer des éléments suivants :
 
 1. Une machine avec un système d'exploitation compatible Java (Windows, Mac, Linux)
-2. Une version de Java installée
+2. Java 17 installée
 3. Un IDE Java (IntelliJ IDEA, Eclipse, etc.)
-4. Git doit être installé sur votre machine.
+4. Git sur votre machine.
 
 ## Installation
 
