@@ -1,45 +1,54 @@
 # Centre de Vaccination
 
-Ce projet vise à créer une application de réservation dans un centre de vaccination Covid. L'application offre un accès public permettant la recherche des centres par ville et l'inscription à un centre. Elle offre également un accès administrateur permettant la gestion complète des centres, des administrateurs, des médecins, et des réservations.
+Le projet CentreDeVaccination est une application Java qui permet de gérer les vaccinations contre le COVID-19. L'application permet de créer des rendez-vous de vaccination, de gérer les stocks de vaccins et de suivre l'état d'avancement de la vaccination.
 
 Lien vers le front-end: https://github.com/BillLeuna/centre-de-vaccination-front.git
 
-## Enrôlement dans le Projet
+## Préréquis
+
+Pour installer et exécuter le projet, vous devez disposer des éléments suivants :
+
+1. Une machine avec un système d'exploitation compatible Java (Windows, Mac, Linux)
+2. La version 17 de Java installée
+3. Un IDE Java (IntelliJ IDEA, Eclipse, etc.)
+4. Un outil de gestion de version (Git, SVN, etc.)
+
+
+## Installation
+
+Pour installer le projet, vous pouvez suivre les étapes suivantes :
 
 1. Clonez le projet depuis GitHub:
    ```bash
    git clone https://github.com/BillLeuna/centre-de-vaccination-back.git
    ```
 
-2. Naviguez vers le répertoire du projet:
+2. Naviguez vers le répertoire du projet :
    ```bash
    cd centre-de-vaccination-back
    ```
 
-## Build du Projet
-
-### Build Gradle Local
-
-1. Initialisez le projet avec Gradle:
-   ```bash
-   gradle init
+3. Installez les dépendances du projet :
+    ```bash
+   gradle build
    ```
 
-2. Gérez les dépendances dans le fichier `build.gradle`.
+## Exécution
 
-3. Gérez les plugins dans le fichier `build.gradle`.
+Pour exécuter le projet en local, vous pouvez suivre les étapes suivantes :
 
-4. Buildez le projet localement :
+
+1. Lancez l'application :
    ```bash
-   ./gradlew build
+   gradle run
    ```
 
-5. Lancez l'application localement :
-   ```bash
-   ./gradlew run
-   ```
+2. L'application sera accessible sur le port `8083`.
 
-### Build Gradle avec Jenkins
+
+## Build depuis Jenkins
+
+Le projet est également accompagné d'un pipeline Jenkins qui permet de lancer des builds automatiques. Pour configurer le pipeline Jenkins, vous devez suivre les étapes suivantes :
 
 
 1. **Prérequis:**
@@ -49,33 +58,10 @@ Lien vers le front-end: https://github.com/BillLeuna/centre-de-vaccination-front
    - Jenkins doit être installé et avoir les droits nécessaires pour accéder au dépôt GitHub
 
 
-2. **Pipeline Jenkins:**
-   - Créez un nouveau pipeline Jenkins en utilisant le script ci-dessous comme exemple.
+2. **Configuration de Jenkins:**
+   - Créez un nouveau pipeline Jenkins...
      ```groovy
-     pipeline {
-         agent any
-
-         stages {
-             stage('Build Backend') {
-                 steps {
-                     script {
-                         // Changez le répertoire de travail avant d'exécuter Gradle
-                         dir("C:\\Users\\Utilisateur\\Documents\\centre-de-vaccination-back") {
-                             bat '"C:\\Program Files\\gradle-8.3\\bin\\gradle.bat" clean build -Dserver.port=8082'
-                         }
-                     }
-                 }
-             }
-
-             stage('Build Docker Image') {
-                 steps {
-                     // Changez le chemin en fonction de la localisation des différents fichiers et documents dans votre ordinateur 
-                     bat 'docker build -t image_test_2:latest -f "C:\\Users\\Utilisateur\\Documents\\centre-de-vaccination-back\\Dockerfile" C:\\Users\\Utilisateur\\Documents\\centre-de-vaccination-back'
-                     bat 'docker run -p 8080:8080 image_test_2:latest'
-                 }
-             }
-         }
-     }
+     
      ```
 
 
@@ -88,59 +74,7 @@ Lien vers le front-end: https://github.com/BillLeuna/centre-de-vaccination-front
    - Les prérequis de l'environnement pour builder un projet Gradle doivent être satisfaits.
    - Le type de build utilisé est Gradle.
    - L'artefact fabriqué (image de conteneur) est stocké localement.
-   
-## Spécifications
 
-### Accès Public
-
-- Recherche des centres par ville (R)
-- Inscription à un centre (mail, téléphone, nom, prénom, date) (C)
-
-### Accès Administration
-
-#### Pour le Super Admin
-
-- Gestion des centres (CRUD)
-- Gestion des administrateurs des centres (CRUD)
-
-#### Pour l’Administrateur
-
-- Gestion des médecins de son centre de vaccination (CRU)
-- Gestion des réservations de son centre (RD)
-
-#### Pour le Médecin
-
-- Recherche d’une personne par son nom (à l’arrivée d’une personne dans le centre) (R)
-- Valider la vaccination d’une personne (au départ de la personne) (U)
-
-### Travaux réalisés lors du TD1
-
-- Entity Bean
-- Mapping objet/relationnel
-- Couche repository
-- Couche RESTController
-  - Une partie /public/*
-  - Une partie /admin/*
-- Couche service
-  - RESTController => Service => Repository
-
-### Travaux de Dév. Front - Angular - Loïc Gangloff
-
-#### Application public de réservation de créneau
-
-- Recherche des centres d’une ville choisie
-- Inscription à un centre (mail, téléphone, nom, prénom, date)
-- Penser en termes de composants
-- Gérer la communication entre composants
-- Mettre en place un type de navigation
-- Encapsuler la logique métier dans des services
-- Implémenter les appels à l'API HTTP
-
-#### Application back office
-
-- Gestion des centres, administrateurs et super admins pour le super admin
-- Gestion des médecins et des réservations pour l'administrateur
-- Recherche d’une personne et validation de la vaccination pour le médecin
 
 ## Contact
 
