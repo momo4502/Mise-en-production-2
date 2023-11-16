@@ -19,15 +19,6 @@ pipeline {
             }
         }
 
-        stage('clean container') {
-            steps {
-                script {
-                    // Utilisation de 'bat' pour exécuter des commandes spécifiques à Windows
-                    bat 'docker container stop ${dockerContainerName}'
-                }
-            }
-        }
-
         stage('docker-compose start') {
             steps {
                 script {
