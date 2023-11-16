@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.CentreDeVaccination.CentreDeVaccinationApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-11-16T21:22:04" hostname="pny-sci-d08" time="0.022">
+<testsuite name="com.example.CentreDeVaccination.CentreDeVaccinationApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-11-16T21:57:47" hostname="pny-sci-d08" time="0.023">
   <properties/>
-  <testcase name="contextLoads()" classname="com.example.CentreDeVaccination.CentreDeVaccinationApplicationTests" time="0.022"/>
-  <system-out><![CDATA[22:21:57.257 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.CentreDeVaccination.CentreDeVaccinationApplicationTests]: CentreDeVaccinationApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-22:21:57.449 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.CentreDeVaccination.App for test class com.example.CentreDeVaccination.CentreDeVaccinationApplicationTests
+  <testcase name="contextLoads()" classname="com.example.CentreDeVaccination.CentreDeVaccinationApplicationTests" time="0.023"/>
+  <system-out><![CDATA[22:57:40.280 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.CentreDeVaccination.CentreDeVaccinationApplicationTests]: CentreDeVaccinationApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22:57:40.466 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.CentreDeVaccination.App for test class com.example.CentreDeVaccination.CentreDeVaccinationApplicationTests
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -13,23 +13,23 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.1.4)
 
-2023-11-16T22:21:58.291+01:00  INFO 13776 --- [    Test worker] .e.C.CentreDeVaccinationApplicationTests : Starting CentreDeVaccinationApplicationTests using Java 21.0.1 with PID 13776 (started by Utilisateur in C:\Users\Utilisateur\Documents\centre-de-vaccination-back)
-2023-11-16T22:21:58.295+01:00  INFO 13776 --- [    Test worker] .e.C.CentreDeVaccinationApplicationTests : No active profile set, falling back to 1 default profile: "default"
-2023-11-16T22:21:59.513+01:00  INFO 13776 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-11-16T22:21:59.642+01:00  INFO 13776 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 112 ms. Found 4 JPA repository interfaces.
-2023-11-16T22:22:00.365+01:00  INFO 13776 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-11-16T22:22:00.514+01:00  INFO 13776 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
-2023-11-16T22:22:00.514+01:00  INFO 13776 --- [    Test worker] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
-2023-11-16T22:22:00.863+01:00  INFO 13776 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-11-16T22:22:00.899+01:00  INFO 13776 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-11-16T22:22:00.924+01:00  INFO 13776 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-11-16T22:22:01.320+01:00  INFO 13776 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@57afe44b
-2023-11-16T22:22:01.328+01:00  INFO 13776 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-11-16T22:22:01.884+01:00  INFO 13776 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-11-16T22:22:02.892+01:00  INFO 13776 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-11-16T22:22:03.114+01:00  INFO 13776 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-11-16T22:22:03.819+01:00  WARN 13776 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-11-16T22:22:04.389+01:00  INFO 13776 --- [    Test worker] .e.C.CentreDeVaccinationApplicationTests : Started CentreDeVaccinationApplicationTests in 6.671 seconds (process running for 10.702)
+2023-11-16T22:57:41.285+01:00  INFO 26260 --- [    Test worker] .e.C.CentreDeVaccinationApplicationTests : Starting CentreDeVaccinationApplicationTests using Java 21.0.1 with PID 26260 (started by Utilisateur in C:\Users\Utilisateur\Documents\centre-de-vaccination-back)
+2023-11-16T22:57:41.287+01:00  INFO 26260 --- [    Test worker] .e.C.CentreDeVaccinationApplicationTests : No active profile set, falling back to 1 default profile: "default"
+2023-11-16T22:57:42.329+01:00  INFO 26260 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-16T22:57:42.439+01:00  INFO 26260 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 95 ms. Found 4 JPA repository interfaces.
+2023-11-16T22:57:43.164+01:00  INFO 26260 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-16T22:57:43.303+01:00  INFO 26260 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
+2023-11-16T22:57:43.307+01:00  INFO 26260 --- [    Test worker] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-11-16T22:57:43.599+01:00  INFO 26260 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-11-16T22:57:43.627+01:00  INFO 26260 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-16T22:57:43.666+01:00  INFO 26260 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-16T22:57:44.107+01:00  INFO 26260 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@57afe44b
+2023-11-16T22:57:44.109+01:00  INFO 26260 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-16T22:57:44.630+01:00  INFO 26260 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-11-16T22:57:45.616+01:00  INFO 26260 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-16T22:57:45.876+01:00  INFO 26260 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-16T22:57:46.595+01:00  WARN 26260 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-16T22:57:47.187+01:00  INFO 26260 --- [    Test worker] .e.C.CentreDeVaccinationApplicationTests : Started CentreDeVaccinationApplicationTests in 6.413 seconds (process running for 10.905)
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
