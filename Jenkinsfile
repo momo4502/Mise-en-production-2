@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         GRADLE_HOME = tool 'GRADLE_ENV'
-        PATH = "<span class="math-inline">\{GRADLE\_HOME\}/bin\:</span>{PATH}"
+        PATH = "${GRADLE_HOME}/bin:${PATH}"
         registry = ""
     }
 
