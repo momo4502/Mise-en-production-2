@@ -5,9 +5,9 @@ services:
     build: .
     ports:
       - '8090:8090'
-    container_name: bookapi
+    container_name: centre-de-vaccination-api
     environment:
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://localhost:5432/DataBaseTest
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/DataBaseTest
       - SPRING_DATASOURCE_USERNAME=postgres
       - SPRING_DATASOURCE_PASSWORD=124662929
     links:
@@ -15,6 +15,7 @@ services:
   db:
     image: postgres:15.2
     restart: always
+    container_name: centre-de-vaccination-database
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: 124662929
