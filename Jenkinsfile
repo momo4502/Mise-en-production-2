@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        GRADLE_HOME = tool 'Gradle'
+        GRADLE_HOME = tool 'GRADLE_ENV'
         PATH = "${GRADLE_HOME}/bin:${PATH}"
         registry = ""
         dockerContainerName = 'bookapi'
