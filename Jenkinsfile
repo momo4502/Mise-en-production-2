@@ -2,7 +2,8 @@ pipeline {
     agent any
 
     environment {
-        MAVEN_ARGS="clean install"
+        GRADLE_HOME = tool 'Gradle'
+        PATH = "${GRADLE_HOME}/bin:${PATH}"
         registry = ""
         dockerContainerName = 'bookapi'
         dockerImageName = 'bookapi-api'
@@ -13,7 +14,7 @@ pipeline {
             steps {
                 script {
                     // Utilisation de 'bat' pour exécuter des commandes spécifiques à Windows
-                    bat "mvn ${MAVEN_ARGS}"
+                    bat "gradle clean build"
                 }
             }
         }
