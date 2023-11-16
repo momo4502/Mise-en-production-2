@@ -23,9 +23,7 @@ pipeline {
             steps {
                 script {
                     // Utilisation de 'bat' pour exécuter des commandes spécifiques à Windows
-                    bat 'docker ps -f name=${dockerContainerName} -q | Where-Object { $_ } | ForEach-Object { docker container stop $_ }'
-                    bat 'docker container ls -a -fname=${dockerContainerName} -q | Where-Object { $_ } | ForEach-Object { docker container rm $_ }'
-                    bat 'docker images -q --filter=reference=${dockerImageName} | Where-Object { $_ } | ForEach-Object { docker rmi -f $_ }'
+                    bat 'docker container stop ${dockerContainerName}'
                 }
             }
         }
