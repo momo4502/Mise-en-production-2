@@ -13,6 +13,7 @@ pipeline {
         stage('Build') {
             steps {
                 script {
+                    // Type de build: Build complet
                     // Utilisation de 'bat' pour exécuter des commandes spécifiques à Windows
                     bat "gradle clean build"
                 }
