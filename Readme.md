@@ -2,7 +2,7 @@
 
 Le projet CentreDeVaccination est une application Java qui permet de gérer les vaccinations contre le COVID-19. L'application permet de créer des rendez-vous de vaccination, de gérer les stocks de vaccins et de suivre l'état d'avancement de la vaccination.
 
-Lien vers le front-end: https://github.com/BillLeuna/centre-de-vaccination-front.git
+Lien vers le front-end : https://github.com/BillLeuna/centre-de-vaccination-front.git
 
 ## Préréquis
 
