@@ -9,15 +9,10 @@ import org.springframework.stereotype.Service;
 import com.example.CentreDeVaccination.Exceptions.ObjectNotFoundException;
 import com.example.CentreDeVaccination.Models.Docteur;
 import com.example.CentreDeVaccination.Models.Patient;
-import com.example.CentreDeVaccination.Others.PatientStore;
 import com.example.CentreDeVaccination.Repositories.PatientRepository;
 
 @Service
 public class PatientService {
-
-    @Autowired(required = true)
-    @Qualifier("serializeStore")
-    public PatientStore patientStore;
 
     public PatientRepository patientRepository;
     public DocteurService docteurService;
@@ -30,10 +25,6 @@ public class PatientService {
 
     public PatientService() {
 
-    }
-
-    public PatientStore getPatientStore() {
-        return this.patientStore;
     }
 
     public void initialize() {
