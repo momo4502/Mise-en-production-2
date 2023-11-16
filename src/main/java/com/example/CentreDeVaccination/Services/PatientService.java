@@ -3,7 +3,6 @@ package com.example.CentreDeVaccination.Services;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import com.example.CentreDeVaccination.Exceptions.ObjectNotFoundException;
@@ -25,18 +24,6 @@ public class PatientService {
 
     public PatientService() {
 
-    }
-
-    public void initialize() {
-        System.out.println("PatientService: Méthode d'initialisation appelée");
-    }
-
-    public void close() {
-        System.out.println("PatientService: Méthode de destruction appelée");
-    }
-
-    public void methodeTest() {
-        System.out.println("PatientService: Méthode de test appelée");
     }
 
     public Patient savePatient(Patient patient) {
@@ -92,8 +79,7 @@ public class PatientService {
     }
 
     public Docteur getDocteur(Long id) {
-        Docteur docteur = patientRepository.findById(id).get().getDocteur();
-        return docteur;
+        return patientRepository.findById(id).get().getDocteur();
     }
 
 }
