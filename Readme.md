@@ -29,7 +29,7 @@ En fonction de qui va consulter ce projet, différentes branches ont été cré�
 
 ## Contact
 
-En cas de problème ou de question, n'hésitez pas à me contacter à l'adresse
+En cas de problème ou si vous avez des questions, n'hésitez pas à me contacter à l'adresse
 mail `bill-ruben.mbiawa-leuna1@etu.univ-lorraine.fr`.
 
 ---
