@@ -75,6 +75,24 @@ le pipeline Jenkins, vous devez suivre les étapes suivantes :
 
 ## Documentation
 
+Le projet CentreDeVaccination est construit et déployé automatiquement sur Jenkins. Le pipeline Jenkins est défini dans le fichier Jenkinsfile.
+
+Le pipeline Jenkins suit les étapes suivantes :
+
+1. **Build du projet :** 
+
+Le pipeline commence par construire le projet à l'aide de Gradle. Il utilise la tâche `clean build` pour installer les dépendances du projet, compiler le code source et générer l'artefact final.
+
+2. **Vérification des conteneurs :**
+
+Le pipeline vérifie ensuite si les conteneurs `centre-de-vaccination-api` et `centre-de-vaccination-database` sont en cours d'exécution. Si les conteneurs existent, ils sont arrêtés et supprimés.
+
+3. **Lancement des conteneurs :**
+
+Le pipeline lance ensuite les conteneurs `centre-de-vaccination-api` et `centre-de-vaccination-database` à l'aide de `docker compose up -d`.
+
+Une fois le pipeline terminé, l'application est accessible sur le port `8090`.
+
 
 
 ## Contact
