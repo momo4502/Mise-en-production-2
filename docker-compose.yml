@@ -5,21 +5,21 @@ services:
     build: .
     ports:
       - '8090:8090'
-    container_name: centre-de-vaccination-api
+    container_name: vaccination-center-api
     environment:
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/DataBaseTest
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/BaseDeDonnees
       - SPRING_DATASOURCE_USERNAME=postgres
-      - SPRING_DATASOURCE_PASSWORD=124662929
+      - SPRING_DATASOURCE_PASSWORD=987654321
     links:
-      - 'db:database'
+      - 'db:BaseDeDonnees'
   db:
     image: postgres:15.2
     restart: always
-    container_name: centre-de-vaccination-database
+    container_name: vaccination-center-database
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: 124662929
-      POSTGRES_DB: DataBaseTest
+      POSTGRES_PASSWORD: 987654321
+      POSTGRES_DB: BaseDeDonnees
     volumes:
       - db-data:/var/lib/postgresql/data
     ports:
