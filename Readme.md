@@ -1,10 +1,11 @@
 # Centre de Vaccination
 
 Le projet CentreDeVaccination est une application Java qui permet de gérer les vaccinations contre le COVID-19.
-L'application permet de créer des rendez-vous de vaccination, de gérer les stocks de vaccins et de suivre l'état d'avancement de la vaccination.
+L'application permet de créer des rendez-vous de vaccination, de gérer les stocks de vaccins et de suivre l'état d'avancement de la vaccination des patients.
 
 Lien vers le front-end : https://github.com/BillLeuna/centre-de-vaccination-front.git
 
+Les captures d'écran du fonctionnement sont disponibles dans le dossier `captures`
 ## Préréquis
 
 Pour installer et exécuter le projet, vous devez disposer des éléments suivants :
@@ -39,13 +40,9 @@ Pour exécuter le projet en local, vous pouvez suivre les étapes suivantes :
 
 1. Installez les dépendances du projet :
     ```bash
-   gradle build
+   gradle clean build
    ```
-
-2. Lancez les tests :
-   ```bash
-   gradle test
-   ```
+   
 2. Lancez l'application :
    ```bash
    gradle run
