@@ -3,93 +3,28 @@
 Le projet CentreDeVaccination est une application Java qui permet de gérer les vaccinations contre le COVID-19.
 L'application permet de créer des rendez-vous de vaccination, de gérer les stocks de vaccins et de suivre l'état d'avancement de la vaccination des patients.
 
-Lien vers le front-end : https://github.com/BillLeuna/centre-de-vaccination-front.git
 
-Les captures d'écran du fonctionnement sont disponibles dans le dossier `captures`
-## Préréquis
+## Recommandations
 
-Pour installer et exécuter le projet, vous devez disposer des éléments suivants :
+En fonction de qui va consulter ce projet, différentes branches ont été créées :
 
-1. Java 17
-2. Un IDE Java (IntelliJ IDEA, Eclipse, etc.)
-3. Git
-4. pgAdmin 
-5. Jenkins
-6. Docker
+1. Mise en production de programmes :
 
-## Installation
+    - Nom de la branche : `release-mise-en-production-de-programmes`
 
-Pour installer le projet, vous pouvez suivre les étapes suivantes :
+    - Lien Github : https://github.com/BillLeuna/centre-de-vaccination-back/tree/release-mise-en-production
 
-1. Clonez le projet depuis GitHub:
-   ```bash
-   git clone https://github.com/BillLeuna/centre-de-vaccination-back.git
-   ```
+    
+2. Programmation full stack :
 
-2. Naviguez vers le répertoire du projet :
-   ```bash
-   cd centre-de-vaccination-back
-   ```
-   
-3. Créez une base de données dans pgAdmin nommée `DataBaseTest`.
+    - Nom de la branche : `release-programmation-full-stack`
+    - Lien Github : https://github.com/BillLeuna/centre-de-vaccination-back/tree/release-programmation-full-stack
 
 
-## Exécution
+3. En général :
 
-Pour exécuter le projet en local, vous pouvez suivre les étapes suivantes :
-
-1. Installez les dépendances du projet :
-    ```bash
-   gradle clean build
-   ```
-   
-2. Lancez l'application :
-   ```bash
-   gradle run
-   ```
-
-3. L'application sera accessible sur le port `8083`.
-
-
-## Build depuis Jenkins
-
-Le projet est également accompagné d'un pipeline Jenkins qui permet de lancer des builds automatiques. Pour configurer
-le pipeline Jenkins, vous devez suivre les étapes suivantes :
-
-1. **Configuration du Pipeline :**
-    - Créez un pipeline Jenkins et nommez le `Gestion de centre de vaccination`
-    - Dans la page suivante, dans la partie Pipeline, sélectionnez `Pipeline script from SCM`
-    - Dans SCM, sélectionnez `Git`
-    - Dans repository, mettez le lien vers le dépôt Github de ce projet: `https://github.com/BillLeuna/centre-de-vaccination-back.git`
-    - Dans branch to build, mettez `*/release`
-    - Sauvegardez cette configuration
-
-
-
-2. **Exécution du Pipeline :**
-    - Exécutez le Pipeline ci-dessus et appréciez les résultats
-
-
-## Documentation
-
-Le projet CentreDeVaccination est construit et déployé automatiquement sur Jenkins. Le pipeline Jenkins est défini dans le fichier Jenkinsfile.
-
-Le pipeline Jenkins suit les étapes suivantes :
-
-1. **Build du projet :** 
-
-Le pipeline commence par construire le projet à l'aide de Gradle. Il utilise la tâche `clean build` pour installer les dépendances du projet, compiler le code source et générer l'artefact final.
-
-2. **Vérification des conteneurs :**
-
-Le pipeline vérifie ensuite si les conteneurs `centre-de-vaccination-api` et `centre-de-vaccination-database` sont en cours d'exécution. Si les conteneurs existent, ils sont arrêtés et supprimés.
-
-3. **Lancement des conteneurs :**
-
-Le pipeline lance ensuite les conteneurs `centre-de-vaccination-api` et `centre-de-vaccination-database` à l'aide de `docker compose up -d`.
-
-Une fois le pipeline terminé, l'application est accessible sur le port `8090`.
-
+    - Nom de la branche : `release`
+    - Lien Github : https://github.com/BillLeuna/centre-de-vaccination-back/tree/release
 
 
 ## Contact
