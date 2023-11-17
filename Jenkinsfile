@@ -13,6 +13,7 @@ pipeline {
                 script {
                     // Utilisation de 'bat' pour exécuter des commandes spécifiques à Windows
                     bat "gradle clean build"
+                    bat "gradle run"
                 }
             }
         }

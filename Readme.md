@@ -59,23 +59,23 @@ Pour exécuter le projet en local, vous pouvez suivre les étapes suivantes :
 Le projet est également accompagné d'un pipeline Jenkins qui permet de lancer des builds automatiques. Pour configurer
 le pipeline Jenkins, vous devez suivre les étapes suivantes :
 
-
-1. **Configuration de Jenkins:**
+1. **Configuration du Pipeline :**
     - Créez un pipeline Jenkins et nommez le `Gestion de centre de vaccination`
     - Dans la page suivante, dans la partie Pipeline, sélectionnez `Pipeline script from SCM`
     - Dans SCM, sélectionnez `Git`
     - Dans repository, mettez le lien vers le dépôt Github de ce projet: `https://github.com/BillLeuna/centre-de-vaccination-back.git`
-    - Dans branch to build, mettez `*/main`
+    - Dans branch to build, mettez `*/release`
+    - Sauvegardez cette configuration
 
-2. **Exécution du Pipeline:**
-    - Le pipeline ci-dessus effectue le build du backend et crée une image Docker.
-    - Assurez-vous que le chemin vers Gradle et le fichier Dockerfile est correct.
 
-3. **Points d'Attention:**
-    - Le conteneur ne doit pas s'exécuter en tant que root.
-    - Les prérequis de l'environnement pour builder un projet Gradle doivent être satisfaits.
-    - Le type de build utilisé est Gradle.
-    - L'artefact fabriqué (image de conteneur) est stocké localement.
+
+2. **Exécution du Pipeline :**
+    - Exécutez le Pipeline ci-dessus et appréciez les résultats
+
+
+## Documentation
+
+
 
 ## Contact
 
